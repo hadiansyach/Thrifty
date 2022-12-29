@@ -40,3 +40,33 @@
     border-width: 6px;
     border-radius: 10px;
 }
+.icon-search{
+    margin-right: 10px;
+}
+.ctn-banner{
+    margin-top: 30px;
+}
+.banner{
+    width: 95%;
+}
+.banner2{
+    width: 95%;
+}
+.kategori{
+    width: 90%;
+}
+.txt-kategori{
+    margin-bottom:30px ;
+}
+.ctn-kategori{
+    margin-top: 50px;
+}
+.garis-kategori{
+    margin-top: 30px;
+}
+.txt-iconktgr{
+    margin-top: 20px;
+}
+h5{
+    font-weight: bold;
+}
