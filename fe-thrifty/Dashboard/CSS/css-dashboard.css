@@ -1,6 +1,9 @@
 *{
     font-family: 'Inter', sans-serif;
 }
+h5{
+    font-weight: bold;
+}
 .header{
     background-color: #3E92CC;
     padding: 25px;
@@ -67,6 +70,9 @@
 .txt-iconktgr{
     margin-top: 20px;
 }
-h5{
-    font-weight: bold;
+.ctn-pilihan{
+    margin-top: 40px;
+}
+.foto-produk{
+    width: 200px;
 }
