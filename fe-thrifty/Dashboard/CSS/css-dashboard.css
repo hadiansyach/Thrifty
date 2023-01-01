@@ -4,6 +4,9 @@
 h5{
     font-weight: bold;
 }
+.container{
+    margin-top: 50px;
+}
 .header{
     background-color: #3E92CC;
     padding: 25px;
@@ -46,9 +49,6 @@ h5{
 .icon-search{
     margin-right: 10px;
 }
-.ctn-banner{
-    margin-top: 30px;
-}
 .banner{
     width: 95%;
 }
@@ -61,18 +61,24 @@ h5{
 .txt-kategori{
     margin-bottom:30px ;
 }
-.ctn-kategori{
-    margin-top: 50px;
-}
 .garis-kategori{
     margin-top: 30px;
 }
 .txt-iconktgr{
     margin-top: 20px;
 }
-.ctn-pilihan{
-    margin-top: 40px;
-}
 .foto-produk{
     width: 200px;
+}
+.harga{
+    font-weight: bold;
+}
+.card-img-top{
+    max-width: 100%;
+}
+.text-lokasi{
+    margin-top: 30px;
+}
+.card{
+    margin-right: 25px;
 }
