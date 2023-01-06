@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -28,4 +29,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/login', [AuthController::class, 'tampilanLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'processLogin'])->name('login');
+Route::get('/register', [AuthController::class, 'tampilanRegister']);
+Route::get('/register2', [AuthController::class, 'tampilanRegister2'])->name('register2');
+Route::post('/register', [AuthController::class, 'processRegister'])->name('register');
+Route::get('/dashboard', [AuthController::class, 'tampilanDashboard'])->middleware('auth')->name('dashboard');
+Route::get('/jualproduk', [AuthController::class, 'tampilanJualproduk'])->name('jualproduk ');
+Route::get('/daftarjual', [AuthController::class, 'tampilandaftarjual'])->name('daftarjual ');
+Route::get('/editproduk', [AuthController::class, 'tampilanEditproduk'])->name('editproduk ');
+
+
+
+// require __DIR__.'/auth.php';

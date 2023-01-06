@@ -1,0 +1,84 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+h5{
+    font-weight: bold;
+}
+.container{
+    margin-top: 50px;
+}
+.header{
+    background-color: #3E92CC;
+    padding: 25px;
+}
+.kotak-cari{
+    border-radius: 10px;
+    display: inline-block;
+    border-style: solid;
+    padding-right: 3px;
+    border-color: #FFFAFF;
+    padding: 5px;
+}
+
+::placeholder{
+    color: #FFFAFF;
+}
+.text-cari{
+    padding-left: 10px;
+    width: 360px;
+    height: 35px;
+    border: none;   
+    outline: none;
+    border-radius: 5px;
+    background: transparent;
+    color: #FFFAFF;
+}
+.button-cari{
+    border-radius: 4px;
+    padding: 7px 20px;
+    color: #fafafa;
+    border: none;
+    background-color: #DE490D;
+    cursor: pointer;
+}
+.btn-danger{
+    border-color: white;
+    border-width: 2px;
+    border-radius: 10px;
+}
+.icon-search{
+    margin-right: 10px;
+}
+.banner{
+    width: 95%;
+}
+.banner2{
+    width: 95%;
+}
+.kategori{
+    width: 90%;
+}
+.txt-kategori{
+    margin-bottom:30px ;
+}
+.garis-kategori{
+    margin-top: 30px;
+}
+.txt-iconktgr{
+    margin-top: 20px;
+}
+.foto-produk{
+    width: 200px;
+}
+.harga{
+    font-weight: bold;
+}
+.card-img-top{
+    max-width: 100%;
+}
+.text-lokasi{
+    margin-top: 30px;
+}
+.card{
+    margin-right: 25px;
+}

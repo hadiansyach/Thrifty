@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/css-preview.css" />
+    <!-- CDN Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Preview Barang</title>
+  </head>
+  <body>
+    <!-- headers -->
+    <div class="header">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <img class="" src="Asset/logo-thrifty.svg" alt="" />
+        </div>
+
+        <div>
+          <div class="kotak-cari">
+            <input
+              class="text-cari"
+              type="text"
+              placeholder="Cari di Thrifty"
+            />
+            <img
+              class="icon-search"
+              src="Asset/icon-search.svg"
+              alt=""
+              usemap="#usemap"
+            />
+            <map name="usemap">
+              <area shape="default" coords="" href="#" alt="" />
+            </map>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-around align-items-center">
+          <div>
+            <img src="Asset/icon-chatt.svg" alt="" />
+          </div>
+
+          <div>
+            <button type="button" class="btn btn-danger">+ Jual</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Konten -->
+    <div class="container mt-5 d-flex">
+      <div class="kiri">
+        <div>
+          <img
+            class="preview-foto"
+            src="Asset/produk/produk-celana.png"
+            alt=""
+          />
+        </div>
+
+        <div class="box mt-3">
+          <div>
+            <center><h5>Rp 999.999.999</h5></center>
+          </div>
+
+          <div class="d-grid mt-3">
+            <button class="btn btn-primary btn-chatt" type="button">Chatt Penjual</button>
+          </div>
+        </div>
+
+        <div class="box mt-3">
+          <div class="">
+            <center><h6>Dijual Oleh</h6></center>
+          </div>
+
+          <div class="d-flex justify-content-start align-items-center mt-2">
+            <img src="Asset/profile-penjual.svg" alt="">
+            <h5 class="ms-3">Arfan Rahman Yudiantoro</h5>
+          </div>
+
+          <div class="tanggal-jual mt-2 d-flex justify-content-between">
+            <h6>Diposting pada : </h6>
+            <h6>05/01/2023</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="kanan">
+        <div class="box">
+          <h4>Celana Slimfit Uniqlo</h4>
+          <div class="d-flex align-items-center mb-1">
+            <span class="me-3">Kategori</span>
+            <span class="kategori">Kaos</span>
+          </div> 
+
+          <div class="d-flex justify-content-between">
+            <div class="d-flex">
+              <img class="me-3" src="Asset/icon-stok.svg" alt="">
+             <h5>Stok produk</h5>
+            </div>
+            <h5>1</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer d-flex">
+      <div class="container d-flex align-items-center">
+        <img class="logo-footer" src="Asset/logo-thrifty.svg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
