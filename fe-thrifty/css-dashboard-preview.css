@@ -94,6 +94,41 @@ h6{
     max-width: 50%;
     margin-right: 20px;
 }
+
+/* Preview */
+.preview-foto{
+    border-radius: 7px;
+    max-width: 350px;
+}
+.box{
+    box-shadow: 1px 1px 10px rgb(231, 231, 231);
+    border-radius: 10px;
+}
+.kiri{
+    width: 30%;
+}
+.konten{
+    padding: 20px 15px 20px 15px;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #40C351;
+    border-radius: 10px;
+}
+.keterangan{
+    background-color: #3E92CC;
+    color: #fafafa;
+    border-radius: 3px;
+    padding: 3px 5px;
+}
+.garis{
+    border-left: 3px solid #DAD6DA;
+    height: 30px;
+}
+.kanan{
+    width: 70%;
+
+}
+/* footer */
 .footer{
     background-color: #76B1DA;
     height: 300px;

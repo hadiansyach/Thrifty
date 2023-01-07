@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/css-preview.css" />
+    <link rel="stylesheet" href="/css-dashboard-preview.css" />
     <!-- CDN Google Font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,10 +51,6 @@
 
         <div class="d-flex justify-content-around align-items-center">
           <div>
-            <img src="Asset/icon-chatt.svg" alt="" />
-          </div>
-
-          <div>
             <button type="button" class="btn btn-danger">+ Jual</button>
           </div>
         </div>
@@ -63,6 +59,7 @@
 
     <!-- Konten -->
     <div class="container mt-5 d-flex">
+      <!-- kiri -->
       <div class="kiri">
         <div>
           <img
@@ -72,19 +69,23 @@
           />
         </div>
 
-        <div class="box mt-3">
-          <div>
-            <center><h5>Rp 999.999.999</h5></center>
+        <div class="box konten mt-3">
+          <div class="text-center">
+            <h5>Rp 999.999.999</h5>
           </div>
 
-          <div class="d-grid mt-3">
-            <button class="btn btn-primary btn-chatt" type="button">Chatt Penjual</button>
-          </div>
+          <center>
+            <div class="mt-2">
+              <button class="ps-5 pe-5 btn btn-primary">
+                <img src="Asset/icon-whatsapp.png" width="30" /> Chatt Penjual
+              </button>
+            </div>
+          </center>
         </div>
 
-        <div class="box mt-3">
-          <div class="">
-            <center><h6>Dijual Oleh</h6></center>
+        <div class="box konten mt-3">
+          <div class="text-center">
+            <h6>Dijual Oleh</h6>
           </div>
 
           <div class="d-flex justify-content-start align-items-center mt-2">
@@ -99,21 +100,63 @@
         </div>
       </div>
 
-      <div class="kanan">
-        <div class="box">
-          <h4>Celana Slimfit Uniqlo</h4>
-          <div class="d-flex align-items-center mb-1">
+      <!-- kanan -->
+      <div class="kanan ps-5">
+        <div class="box konten">
+          <h3 class="mb-2 fw-bolder">Celana Slimfit Uniqlo</h3>
+          <div class="mb-2 d-flex align-items-center justify-content-start">
             <span class="me-3">Kategori</span>
-            <span class="kategori">Kaos</span>
+            <span class="me-3 keterangan">Kaos</span>
+            <div class="me-3 garis"></div>
+            <span class="me-3">Kondisi</span>
+            <span class="keterangan">Bekas - Seperti Baru</span>
           </div> 
 
-          <div class="d-flex justify-content-between">
-            <div class="d-flex">
-              <img class="me-3" src="Asset/icon-stok.svg" alt="">
-             <h5>Stok produk</h5>
+          <div class="status">
+            <!-- ukuran produk -->
+            <div class="d-flex mb-3">
+              <img class="me-3" src="Asset/icon-ukuran.svg" alt="">
+              <h6 class="me-3">Ukuran Produk</h6>
+              <h6 class="ukuran fw-bolder">XL</h6>
             </div>
-            <h5>1</h5>
+
+            <!-- stok produk -->
+            <div class="d-flex mb-3">
+              <img class="me-3" src="Asset/icon-stok.svg" alt="">
+              <h6 class="me-3">Stok produk</h6>
+              <h6 class="stok fw-bolder">1</h6>
+            </div>
+
+
+            <!-- lokasi -->
+            <div class="d-flex">
+              <img class="me-3" src="Asset/icon-lokasi.svg" alt="">
+              <h6>Cibiru, Bandung</h6>
+            </div>
           </div>
+        </div>
+
+        <!-- deskripsi -->
+        <div class="box konten mt-3">
+          <div class="pb-3 border-bottom">
+            <h5>Deskripsi</h5>
+          </div>
+
+          <div class="p-2">
+            <p>
+              T-Shirt Vintage Uniqlo
+              - Model kece  
+              - Mulus parah
+              
+              Bahan: 
+              Cotton Combed 20s
+              
+              Ukuran:
+              M
+               
+              Nego sampai deal!!!</p>
+          </div>
+
         </div>
       </div>
     </div>
