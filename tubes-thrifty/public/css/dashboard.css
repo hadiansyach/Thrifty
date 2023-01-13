@@ -8,6 +8,12 @@ h5{
 h6{
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
+.kolay{
+    background-color: #3E92CC;
+}
 .container{
     margin-top: 35px;
 }
@@ -23,7 +29,10 @@ h6{
     border-color: #FFFAFF;
     padding: 5px;
 }
-
+.prod{
+    width: 50px;
+    height: 500px;
+}
 ::placeholder{
     color: #FFFAFF;
 }
@@ -44,11 +53,6 @@ h6{
     border: none;
     background-color: #DE490D;
     cursor: pointer;
-}
-.btn-danger{
-    border-color: black;
-    border-width: 6px;
-    border-radius: 10px;
 }
 .icon-search{
     margin-right: 10px;
@@ -85,7 +89,9 @@ h6{
     margin-top: 30px;
 }
 .card{
-    margin-right: 25px;
+    min-width: none;
+    margin-left: 10px;
+    margin-right: 10px;
     border: none;
     box-shadow:  2px 2px 12px rgb(231, 231, 231);
 }
@@ -108,4 +114,10 @@ h6{
 }
 .logo-footer{
     max-width: 9%;
+}
+.dropd{
+    display: none;
+}
+@media (min-width: 768px) {
+
 }

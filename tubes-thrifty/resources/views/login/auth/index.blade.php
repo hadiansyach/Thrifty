@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <title>Login</title>
   </head>
@@ -41,9 +41,9 @@
                       <div class="form-group last mb-3">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" placeholder="Password (8+ Characters)" id="password" name="password" >
-                      </div>                   
-                      <input type="submit" value="Continue" class="btn btn-block btn-primary">
-        
+                      </div>     
+                      <p>Doesnt Have Account?  <a class="regis" href="register">Register</a></p>       
+                      <input type="submit" value="Continue" class="btn btn-block btn-primary"> 
                     </form>
                 </div>
           </div>

@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/dashboard.css" />
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
     <!-- CDN Google Font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> --}}
 
     <title>Thrifty</title>
   </head>
@@ -28,40 +33,32 @@
     <div class="header">
       <div class="d-flex justify-content-between align-items-center">
         <div>
-          <img class="" src="Asset/logo-thrifty.svg" alt="" />
+          <a href="dashboard"><img class="" src="images/logo-thrifty.svg" alt="" /></a>
         </div>
-
-        <div>
-          <div class="kotak-cari">
-            <input
-              class="text-cari"
-              type="text"
-              placeholder="Cari di Thrifty"
-            />
-            <img
-              class="icon-search"
-              src="Asset/icon-search.svg"
-              alt=""
-              usemap="#usemap"
-            />
-            <map name="usemap">
-              <area shape="default" coords="" href="#" alt="" />
-            </map>
-          </div>
-        </div>
-
         <div class="d-flex justify-content-around align-items-center">
-          <div>
-            <img src="Asset/icon-chatt.svg" alt="" />
+          <div class="d-none d-sm-block ">
+            <a href="daftarjual"><button type="button" class="btn btn-success "style="border-radius: 5px;border-color: white; border-width: 1px">Daftar Jual</button></a>
+            <a href="jualproduk"><button type="button" class="btn btn-danger " style="border-radius: 5px;border-color: white; border-width:1px ">+ Jual</button></a>
           </div>
+          <div class="ps-3">
+            <div class="dropdown">
+              <a href="editprofile">
+                <img src="{{ $user->img ? asset($user->img) : 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png' }}" class="rounded-circle" height="50" width="50 " >
+              </a>
+              <button class="btn btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">   
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="editprofile">Edit Profile</a></li>
+                <li><a class="dropdown-item d-sm-none d-block" href="daftarjual">Daftar jual</a></li>
+                <li><a class="dropdown-item d-sm-none d-block" href="jualproduk">Jual Barang</a></li>
+                <li><a class="dropdown-item" href="logout">Logout</a></li>
 
-          <div>
-            <button type="button" class="btn btn-danger">+ Jual</button>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- Banner -->
     <div class="container ctn-banner">
       <div>
@@ -82,38 +79,38 @@
       <h5 class="txt-kategori">Kategori</h5>
       <div class="d-flex justify-content-between align-items-center">
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-kaos.svg" alt="" />
-          <h6 class="txt-iconktgr">Kaos</h6>
+          <a href="#kaos"><img class="kategori" src="Asset/kategori/icon-kaos.svg" alt="" />
+            <h6 class="txt-iconktgr">Kaos</h6></a>
         </div>
 
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-celana.svg" alt="" />
-          <h6 class="txt-iconktgr">Celana</h6>
+          <a href="#celana"><img class="kategori" src="Asset/kategori/icon-celana.svg" alt="" />
+            <h6 class="txt-iconktgr">Celana</h6></a>
         </div>
 
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-kemeja.svg" alt="" />
-          <h6 class="txt-iconktgr">Kemeja</h6>
+          <a href="#kemeja"><img class="kategori" src="Asset/kategori/icon-kemeja.svg" alt="" />
+            <h6 class="txt-iconktgr">Kemeja</h6></a>
         </div>
 
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-jaket.svg" alt="" />
-          <h6 class="txt-iconktgr">Jaket</h6>
+          <a href="#jaket"><img class="kategori" src="Asset/kategori/icon-jaket.svg" alt="" />
+            <h6 class="txt-iconktgr">Jaket</h6></a>
         </div>
 
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-sepatu.svg" alt="" />
-          <h6 class="txt-iconktgr">Sepatu</h6>
+          <a href="#sepatu"><img class="kategori" src="Asset/kategori/icon-sepatu.svg" alt="" />
+            <h6 class="txt-iconktgr">Sepatu</h6></a>
         </div>
 
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-topi.svg" alt="" />
-          <h6 class="txt-iconktgr">Topi</h6>
+          <a href="#topi"><img class="kategori" src="Asset/kategori/icon-topi.svg" alt="" />
+            <h6 class="txt-iconktgr">Topi</h6></a>
         </div>
 
         <div class="text-center">
-          <img class="kategori" src="Asset/kategori/icon-tas.svg" alt="" />
-          <h6 class="txt-iconktgr">Tas</h6>
+          <a href="#tas"><img class="kategori" src="Asset/kategori/icon-tas.svg" alt="" />
+            <h6 class="txt-iconktgr">Tas</h6></a>
         </div>
       </div>
       <hr class="garis-kategori" />
@@ -122,102 +119,37 @@
     <!-- Pilihan Hari Ini -->
     <div class="container">
       <h5>Pilihan Hari Ini</h5>
-      <div class="justify-content-between d-flex">
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
+      <div class="justify-content-start d-flex flex-row flex-wrap">
+        @forelse ($produks as $produk)
+        <?php
+          $created = new Carbon\Carbon($produk->created_at);
+          $now = Carbon\Carbon::now();
+          $difference = ($created->diff($now)->days < 1)
+              ? 'today'
+              : $created->diffForHumans($now);
+        ?>
+        <a href="{{ route('preview', $produk->id) }}">
+          <div class="card mb-4" style="width: 18rem">
+            <img
+            style="width: 300px; height: 300px"
+              src="{{ asset($produk->img1) }}"
+              class="prod card-img-top"
+              alt="..."
+            />
+          </a>
+            <div class="card-body">
+              <p class="card-text">{{ $produk->namaproduk }}</p>
+              <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+              <div class="text-lokasi d-flex">
+                <h6 class="text-muted">{{ $difference }}</h6>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Margahayu, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @empty
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
-            </div>
-          </div>
-        </div>
+        @endforelse
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-celana.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Celana Uniqlo Slimfit</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Pasteur, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -229,110 +161,46 @@
           src="Asset/icon-kategori/tshirt.png"
           alt="kaos"
         />
-        <h5>Kaos</h5>
+        <h5 id="kaos">Kaos</h5>
       </div>
 
       <div>
-        <div class="justify-content-between d-flex">
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-kaos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Kaos Punkers</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
+        <div class="justify-content-start d-flex">
+            @forelse ($kaos as $produk)
+            <?php
+              $created = new Carbon\Carbon($produk->created_at);
+              $now = Carbon\Carbon::now();
+              $difference = ($created->diff($now)->days < 1)
+                  ? 'today'
+                  : $created->diffForHumans($now);
+            ?>
+            <a href="{{ route('preview', $produk->id) }}">
+              <div class="card mb-4" style="width: 18rem">
+                <img
+                style="width: 300px; height: 300px"
+                  src="{{ asset($produk->img1) }}"
+                  class="prod card-img-top"
+                  alt="..."
+                />
+              </a>
+                <div class="card-body">
+                  <p class="card-text">{{ $produk->namaproduk }}</p>
+                  <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+                  <div class="text-lokasi d-flex">
+                    <h6 class="text-muted">{{ $difference }}</h6>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-kaos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Kaos Punkers</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
+            @empty
 
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-kaos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Kaos Punkers</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
+            @endforelse
 
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-kaos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Kaos Punkers</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-kaos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Kaos Punkers</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-kaos.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Kaos Punkers</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <!-- Kategori Celana -->
+
+    {{-- Kategori Celana --}}
     <div class="container">
       <div class="d-flex align-items-center">
         <img
@@ -340,106 +208,41 @@
           src="Asset/icon-kategori/jeans.png"
           alt="kaos"
         />
-        <h5>Celana</h5>
+        <h5 id="celana">Celana</h5>
       </div>
 
       <div>
         <div class="justify-content-between d-flex">
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-celana.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Celana Uniqlo Slimfit</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
 
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-celana.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Celana Uniqlo Slimfit</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
+            @forelse ($celana as $produk)
+            <?php
+              $created = new Carbon\Carbon($produk->created_at);
+              $now = Carbon\Carbon::now();
+              $difference = ($created->diff($now)->days < 1)
+                  ? 'today'
+                  : $created->diffForHumans($now);
+            ?>
+            <a href="{{ route('preview', $produk->id) }}">
+              <div class="card mb-4" style="width: 18rem">
+                <img
+                style="width: 300px; height: 300px"
+                  src="{{ asset($produk->img1) }}"
+                  class="prod card-img-top"
+                  alt="..."
+                />
+              </a>
+                <div class="card-body">
+                  <p class="card-text">{{ $produk->namaproduk }}</p>
+                  <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+                  <div class="text-lokasi d-flex">
+                    <h6 class="text-muted">{{ $difference }}</h6>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-celana.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Celana Uniqlo Slimfit</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
+            @empty
 
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-celana.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Celana Uniqlo Slimfit</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-celana.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Celana Uniqlo Slimfit</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem">
-            <img
-              src="Asset/produk/produk-celana.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <p class="card-text">Celana Uniqlo Slimfit</p>
-              <h5 class="card-title">Rp 230.000</h5>
-              <div class="text-lokasi d-flex">
-                <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-                <h6 class="text-muted">7 Hari Yang Lalu</h6>
-              </div>
-            </div>
-          </div>
+            @endforelse
         </div>
       </div>
     </div>
@@ -448,105 +251,39 @@
     <div class="container">
       <div class="d-flex align-items-center">
         <img class="icon-kategori" src="Asset/icon-kategori/shirt.png" alt="" />
-        <h5>Kemeja</h5>
+        <h5 id="kemeja">Kemeja</h5>
       </div>
 
       <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
+        @forelse ($kemeja as $produk)
+        <?php
+          $created = new Carbon\Carbon($produk->created_at);
+          $now = Carbon\Carbon::now();
+          $difference = ($created->diff($now)->days < 1)
+              ? 'today'
+              : $created->diffForHumans($now);
+        ?>
+        <a href="{{ route('preview', $produk->id) }}">
+          <div class="card mb-4" style="width: 18rem">
+            <img
+            style="width: 300px; height: 300px"
+              src="{{ asset($produk->img1) }}"
+              class="prod card-img-top"
+              alt="..."
+            />
+          </a>
+            <div class="card-body">
+              <p class="card-text">{{ $produk->namaproduk }}</p>
+              <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+              <div class="text-lokasi d-flex">
+                <h6 class="text-muted">{{ $difference }}</h6>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
-            </div>
-          </div>
-        </div>
+        @empty
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted">CIBIRU, BANDUNG</h6>
-              <h6 class="text-muted">7 Hari Yang Lalu</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-kemeja.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Kemeja Kalcer</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @endforelse
       </div>
     </div>
 
@@ -558,105 +295,39 @@
           src="Asset/icon-kategori/jacket 1.png"
           alt=""
         />
-        <h5>Jaket</h5>
+        <h5 id="jaket">Jaket</h5>
       </div>
 
       <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
+        @forelse ($jaket as $produk)
+        <?php
+          $created = new Carbon\Carbon($produk->created_at);
+          $now = Carbon\Carbon::now();
+          $difference = ($created->diff($now)->days < 1)
+              ? 'today'
+              : $created->diffForHumans($now);
+        ?>
+        <a href="{{ route('preview', $produk->id) }}">
+          <div class="card mb-4" style="width: 18rem">
+            <img
+            style="width: 300px; height: 300px"
+              src="{{ asset($produk->img1) }}"
+              class="prod card-img-top"
+              alt="..."
+            />
+          </a>
+            <div class="card-body">
+              <p class="card-text">{{ $produk->namaproduk }}</p>
+              <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+              <div class="text-lokasi d-flex">
+                <h6 class="text-muted">{{ $difference }}</h6>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @empty
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-jaket.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Jaket Carhart</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @endforelse
       </div>
     </div>
 
@@ -668,105 +339,40 @@
           src="Asset/icon-kategori/sneakers.png"
           alt=""
         />
-        <h5>Sepatu</h5>
+        <h5 id="sepatu">Sepatu</h5>
       </div>
 
       <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
+        @forelse ($sepatu as $produk)
+        <?php
+          $created = new Carbon\Carbon($produk->created_at);
+          $now = Carbon\Carbon::now();
+          $difference = ($created->diff($now)->days < 1)
+              ? 'today'
+              : $created->diffForHumans($now);
+        ?>
+        <a href="{{ route('preview', $produk->id) }}">
+          <div class="card mb-4" style="width: 18rem">
+            <img
+            style="width: 300px; height: 300px"
+              src="{{ asset($produk->img1) }}"
+              class="prod card-img-top"
+              alt="..."
+            />
+          </a>
+            <div class="card-body">
+              <p class="card-text">{{ $produk->namaproduk }}</p>
+              <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+              <div class="text-lokasi d-flex">
+                <h6 class="text-muted">{{ $difference }}</h6>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @empty
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @endforelse
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-sepatu.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Reebok Classic</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Tamansari, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -774,105 +380,40 @@
     <div class="container">
       <div class="d-flex align-items-center">
         <img class="icon-kategori" src="Asset/icon-kategori/cap.png" alt="">
-        <h5>Topi</h5>
+        <h5 id="topi">Topi</h5>
       </div>
 
       <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-topi.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Topi Vintage Yosemite</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-topi.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Topi Vintage Yosemite</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @forelse ($topi as $produk)
+            <?php
+              $created = new Carbon\Carbon($produk->created_at);
+              $now = Carbon\Carbon::now();
+              $difference = ($created->diff($now)->days < 1)
+                  ? 'today'
+                  : $created->diffForHumans($now);
+            ?>
+            <a href="{{ route('preview', $produk->id) }}">
+              <div class="card mb-4" style="width: 18rem">
+                <img
+                style="width: 300px; height: 300px"
+                  src="{{ asset($produk->img1) }}"
+                  class="prod card-img-top"
+                  alt="..."
+                />
+              </a>
+                <div class="card-body">
+                  <p class="card-text">{{ $produk->namaproduk }}</p>
+                  <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+                  <div class="text-lokasi d-flex">
+                    <h6 class="text-muted">{{ $difference }}</h6>
+                  </div>
+                </div>
+              </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-topi.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Topi Vintage Yosemite</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+            @empty
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-topi.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Topi Vintage Yosemite</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-topi.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Topi Vintage Yosemite</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-topi.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Topi Vintage Yosemite</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>CIBIRU, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+            @endforelse
       </div>
     </div>
 
@@ -880,105 +421,39 @@
     <div class="container">
       <div class="d-flex align-items-center">
         <img class="icon-kategori" src="Asset/icon-kategori/school-bag 1.png" alt="">
-        <h5>Tas</h5>
+        <h5 id="tas">Tas</h5>
       </div>
 
       <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+        @forelse ($tas as $produk)
+            <?php
+              $created = new Carbon\Carbon($produk->created_at);
+              $now = Carbon\Carbon::now();
+              $difference = ($created->diff($now)->days < 1)
+                  ? 'today'
+                  : $created->diffForHumans($now);
+            ?>
+            <a href="{{ route('preview', $produk->id) }}">
+              <div class="card mb-4" style="width: 18rem">
+                <img
+                style="width: 300px; height: 300px"
+                  src="{{ asset($produk->img1) }}"
+                  class="prod card-img-top"
+                  alt="..."
+                />
+              </a>
+                <div class="card-body">
+                  <p class="card-text">{{ $produk->namaproduk }}</p>
+                  <h5 class="card-title">Rp.{{ $produk->hargaproduk }}</h5>
+                  <div class="text-lokasi d-flex">
+                    <h6 class="text-muted">{{ $difference }}</h6>
+                  </div>
+                </div>
+              </div>
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+            @empty
 
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem">
-          <img
-            src="Asset/produk/produk-tas.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">Tas Vintage</p>
-            <h5 class="card-title">Rp 230.000</h5>
-            <div class="text-lokasi d-flex">
-              <h6 class="text-muted"><small>Lembang, BANDUNG</small></h6>
-              <h6 class="text-muted"><small>7 Hari Yang Lalu</small></h6>
-            </div>
-          </div>
-        </div>
+            @endforelse
 
       </div>
     </div>
