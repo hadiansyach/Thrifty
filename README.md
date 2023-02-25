@@ -1,3 +1,3 @@
-# WEB Marketplace Thrift 
+# Tugas Besar PBW dan SBD 2
 
-Tugas Besar PBW, SBD dan DPL
+Aplikasi marketplace Thrifty berbasis website
